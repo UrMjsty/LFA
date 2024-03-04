@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/urmjsty/software_eng/RiderProjects/LFALab/LFALab/LFALab.csproj",
-      "projectName": "LFALab",
-      "projectPath": "/home/urmjsty/software_eng/RiderProjects/LFALab/LFALab/LFALab.csproj",
+      "projectUniqueName": "/home/urmjsty/software_eng/RiderProjects/LFALab/LFALab2/LFALab2.csproj",
+      "projectName": "LFALab2",
+      "projectPath": "/home/urmjsty/software_eng/RiderProjects/LFALab/LFALab2/LFALab2.csproj",
       "packagesPath": "/home/urmjsty/.nuget/packages/",
-      "outputPath": "/home/urmjsty/software_eng/RiderProjects/LFALab/LFALab/obj/",
+      "outputPath": "/home/urmjsty/software_eng/RiderProjects/LFALab/LFALab2/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/urmjsty/.nuget/NuGet/NuGet.Config"

@@ -1,0 +1,15 @@
+/home/urmjsty/software_eng/RiderProjects/LFALab/LFALab2/obj/Debug/net6.0/LFALab2.csproj.AssemblyReference.cache
+/home/urmjsty/software_eng/RiderProjects/LFALab/LFALab2/obj/Debug/net6.0/LFALab2.GeneratedMSBuildEditorConfig.editorconfig
+/home/urmjsty/software_eng/RiderProjects/LFALab/LFALab2/obj/Debug/net6.0/LFALab2.AssemblyInfoInputs.cache
+/home/urmjsty/software_eng/RiderProjects/LFALab/LFALab2/obj/Debug/net6.0/LFALab2.AssemblyInfo.cs
+/home/urmjsty/software_eng/RiderProjects/LFALab/LFALab2/obj/Debug/net6.0/LFALab2.csproj.CoreCompileInputs.cache
+/home/urmjsty/software_eng/RiderProjects/LFALab/LFALab2/bin/Debug/net6.0/LFALab2
+/home/urmjsty/software_eng/RiderProjects/LFALab/LFALab2/bin/Debug/net6.0/LFALab2.deps.json
+/home/urmjsty/software_eng/RiderProjects/LFALab/LFALab2/bin/Debug/net6.0/LFALab2.runtimeconfig.json
+/home/urmjsty/software_eng/RiderProjects/LFALab/LFALab2/bin/Debug/net6.0/LFALab2.dll
+/home/urmjsty/software_eng/RiderProjects/LFALab/LFALab2/bin/Debug/net6.0/LFALab2.pdb
+/home/urmjsty/software_eng/RiderProjects/LFALab/LFALab2/obj/Debug/net6.0/LFALab2.dll
+/home/urmjsty/software_eng/RiderProjects/LFALab/LFALab2/obj/Debug/net6.0/refint/LFALab2.dll
+/home/urmjsty/software_eng/RiderProjects/LFALab/LFALab2/obj/Debug/net6.0/LFALab2.pdb
+/home/urmjsty/software_eng/RiderProjects/LFALab/LFALab2/obj/Debug/net6.0/LFALab2.genruntimeconfig.cache
+/home/urmjsty/software_eng/RiderProjects/LFALab/LFALab2/obj/Debug/net6.0/ref/LFALab2.dll

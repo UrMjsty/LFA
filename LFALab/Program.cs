@@ -37,6 +37,12 @@ class GrammarToNFAConverter
         nfa.AddTransition(2, 'b', 2);
         nfa.AddTransition(2, 'f', 3);
 
+        string test1 = "dda";
+        bool isAccepted1 = nfa.Accepts(test1); 
+        Console.WriteLine($"String '{test1}' is {(isAccepted1 ? "accepted" : "rejected")} by the NFA.");
+        var test2 = "dad";
+        bool isAccepted2 = nfa.Accepts(test2);
+        Console.WriteLine($"String '{test2}' is {(isAccepted2 ? "accepted" : "rejected")} by the NFA.");
 
         // Check if a string is accepted by the NFA
         for (int i = 0; i < 5; i++)
@@ -91,7 +97,7 @@ class GrammarCringe
         return rules.Values.SelectMany(p => p).SelectMany(p => p).Where(c => !char.IsUpper(c)).Distinct();
     }
 }
-class Grammar
+public class Grammar
 {
     private Dictionary<string, HashSet<string>> productionRules;
     private Random random;
