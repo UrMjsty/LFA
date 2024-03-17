@@ -1,0 +1,15 @@
+/home/urmjsty/software_eng/RiderProjects/LFALab/LexerForUniLab/bin/Debug/net6.0/LexerForUniLab
+/home/urmjsty/software_eng/RiderProjects/LFALab/LexerForUniLab/bin/Debug/net6.0/LexerForUniLab.deps.json
+/home/urmjsty/software_eng/RiderProjects/LFALab/LexerForUniLab/bin/Debug/net6.0/LexerForUniLab.runtimeconfig.json
+/home/urmjsty/software_eng/RiderProjects/LFALab/LexerForUniLab/bin/Debug/net6.0/LexerForUniLab.dll
+/home/urmjsty/software_eng/RiderProjects/LFALab/LexerForUniLab/bin/Debug/net6.0/LexerForUniLab.pdb
+/home/urmjsty/software_eng/RiderProjects/LFALab/LexerForUniLab/obj/Debug/net6.0/LexerForUniLab.csproj.AssemblyReference.cache
+/home/urmjsty/software_eng/RiderProjects/LFALab/LexerForUniLab/obj/Debug/net6.0/LexerForUniLab.GeneratedMSBuildEditorConfig.editorconfig
+/home/urmjsty/software_eng/RiderProjects/LFALab/LexerForUniLab/obj/Debug/net6.0/LexerForUniLab.AssemblyInfoInputs.cache
+/home/urmjsty/software_eng/RiderProjects/LFALab/LexerForUniLab/obj/Debug/net6.0/LexerForUniLab.AssemblyInfo.cs
+/home/urmjsty/software_eng/RiderProjects/LFALab/LexerForUniLab/obj/Debug/net6.0/LexerForUniLab.csproj.CoreCompileInputs.cache
+/home/urmjsty/software_eng/RiderProjects/LFALab/LexerForUniLab/obj/Debug/net6.0/LexerForUniLab.dll
+/home/urmjsty/software_eng/RiderProjects/LFALab/LexerForUniLab/obj/Debug/net6.0/refint/LexerForUniLab.dll
+/home/urmjsty/software_eng/RiderProjects/LFALab/LexerForUniLab/obj/Debug/net6.0/LexerForUniLab.pdb
+/home/urmjsty/software_eng/RiderProjects/LFALab/LexerForUniLab/obj/Debug/net6.0/LexerForUniLab.genruntimeconfig.cache
+/home/urmjsty/software_eng/RiderProjects/LFALab/LexerForUniLab/obj/Debug/net6.0/ref/LexerForUniLab.dll

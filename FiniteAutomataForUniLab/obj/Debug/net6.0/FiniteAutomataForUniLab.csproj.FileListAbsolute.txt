@@ -1,0 +1,15 @@
+/home/urmjsty/software_eng/RiderProjects/LFALab/FiniteAutomataForUniLab/bin/Debug/net6.0/FiniteAutomataForUniLab
+/home/urmjsty/software_eng/RiderProjects/LFALab/FiniteAutomataForUniLab/bin/Debug/net6.0/FiniteAutomataForUniLab.deps.json
+/home/urmjsty/software_eng/RiderProjects/LFALab/FiniteAutomataForUniLab/bin/Debug/net6.0/FiniteAutomataForUniLab.runtimeconfig.json
+/home/urmjsty/software_eng/RiderProjects/LFALab/FiniteAutomataForUniLab/bin/Debug/net6.0/FiniteAutomataForUniLab.dll
+/home/urmjsty/software_eng/RiderProjects/LFALab/FiniteAutomataForUniLab/bin/Debug/net6.0/FiniteAutomataForUniLab.pdb
+/home/urmjsty/software_eng/RiderProjects/LFALab/FiniteAutomataForUniLab/obj/Debug/net6.0/FiniteAutomataForUniLab.csproj.AssemblyReference.cache
+/home/urmjsty/software_eng/RiderProjects/LFALab/FiniteAutomataForUniLab/obj/Debug/net6.0/FiniteAutomataForUniLab.GeneratedMSBuildEditorConfig.editorconfig
+/home/urmjsty/software_eng/RiderProjects/LFALab/FiniteAutomataForUniLab/obj/Debug/net6.0/FiniteAutomataForUniLab.AssemblyInfoInputs.cache
+/home/urmjsty/software_eng/RiderProjects/LFALab/FiniteAutomataForUniLab/obj/Debug/net6.0/FiniteAutomataForUniLab.AssemblyInfo.cs
+/home/urmjsty/software_eng/RiderProjects/LFALab/FiniteAutomataForUniLab/obj/Debug/net6.0/FiniteAutomataForUniLab.csproj.CoreCompileInputs.cache
+/home/urmjsty/software_eng/RiderProjects/LFALab/FiniteAutomataForUniLab/obj/Debug/net6.0/FiniteAutomataForUniLab.dll
+/home/urmjsty/software_eng/RiderProjects/LFALab/FiniteAutomataForUniLab/obj/Debug/net6.0/refint/FiniteAutomataForUniLab.dll
+/home/urmjsty/software_eng/RiderProjects/LFALab/FiniteAutomataForUniLab/obj/Debug/net6.0/FiniteAutomataForUniLab.pdb
+/home/urmjsty/software_eng/RiderProjects/LFALab/FiniteAutomataForUniLab/obj/Debug/net6.0/FiniteAutomataForUniLab.genruntimeconfig.cache
+/home/urmjsty/software_eng/RiderProjects/LFALab/FiniteAutomataForUniLab/obj/Debug/net6.0/ref/FiniteAutomataForUniLab.dll
