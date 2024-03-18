@@ -1,5 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿//using System;
+//using System.Collections.Generic;
 
 namespace LexerForUniLab;
 
@@ -47,9 +47,9 @@ public class Lexer
         }
     }
 
-    public List<Token> Tokenize()
+    public List<Token?> Tokenize()
     {
-        var tokens = new List<Token>();
+        List<Token?> tokens = new List<Token?>();
 
         while (_position < _input.Length)
         {
@@ -114,28 +114,21 @@ public class Lexer
 
 public class Calculator
 {
-    private readonly List<Token> _tokens;
+    private readonly List<Token?> _tokens;
     private int _position;
 
-    public Calculator(List<Token> tokens)
+    public Calculator(List<Token?> tokens)
     {
         _tokens = tokens;
         _position = 0;
     }
 
-    private Token Peek()
+    private Token? Peek()
     {
-        if (_position < _tokens.Count)
-        {
-            return _tokens[_position];
-        }
-        else
-        {
-            return null;
-        }
+        return _position < _tokens.Count ? _tokens[_position] : null;
     }
 
-    private Token Advance()
+    private Token? Advance()
     {
         _position++;
         return _tokens[_position - 1];
@@ -143,27 +136,26 @@ public class Calculator
 
     private double Factor()
     {
-        Token currentToken = Peek();
-        if (currentToken.Type == TokenType.Number)
+        Token? currentToken = Peek();
+        switch (currentToken)
         {
-            Advance();
-            return double.Parse(currentToken.Value);
-        }
-        else if (currentToken.Type == TokenType.LeftParenthesis)
-        {
-            Advance();
-            double result = Expression();
-            if (Peek()?.Type != TokenType.RightParenthesis)
+            case { Type: TokenType.Number }:
+                Advance();
+                return double.Parse(currentToken.Value);
+            case { Type: TokenType.LeftParenthesis }:
             {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine($"Invalid expression: Missing right parenthesis after operator at position {_position}");
+                Advance();
+                double result = Expression();
+                if (Peek()?.Type != TokenType.RightParenthesis)
+                {
+                    // Console.ForegroundColor = ConsoleColor.Red;
+                    throw new InvalidOperationException($"Invalid expression: Missing right parenthesis after operator at position {_position}");
+                }
+                Advance();
+                return result;
             }
-            Advance();
-            return result;
-        }
-        else
-        {
-            throw new InvalidOperationException($"Invalid expression: Expected number or bracket after operator at position {_position}");
+            default:
+                throw new InvalidOperationException($"Invalid expression: Expected number or bracket after operator at position {_position}");
         }
     }
 
@@ -173,9 +165,9 @@ public class Calculator
 
         while (Peek()?.Type == TokenType.Multiply || Peek()?.Type == TokenType.Divide)
         {
-            Token op = Advance();
+            Token? op = Advance();
             double right = Factor();
-            if (op.Type == TokenType.Multiply)
+            if (op is { Type: TokenType.Multiply })
             {
                 result *= right;
             }
@@ -192,11 +184,11 @@ public class Calculator
     {
         double result = Term();
 
-        while (Peek()?.Type == TokenType.Plus || Peek()?.Type == TokenType.Minus)
+        while (Peek()?.Type is TokenType.Plus or TokenType.Minus)
         {
-            Token op = Advance();
+            Token? op = Advance();
             double right = Term();
-            if (op.Type == TokenType.Plus)
+            if (op is { Type: TokenType.Plus })
             {
                 result += right;
             }
@@ -213,27 +205,27 @@ public class Calculator
     {
         double result = Expression();
 
-        if (_position < _tokens.Count - 1 || (_position == _tokens.Count - 1 && _tokens[_position].Type != TokenType.EOF))
+        if (_position < _tokens.Count - 1 || (_position == _tokens.Count - 1 && _tokens[_position]!.Type != TokenType.EOF))
         {
-            Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine($"Invalid expression: Unexpected token '{_tokens[_position].Value}' at position {_position}");
+          //  Console.ForegroundColor = ConsoleColor.Red;
+           throw new InvalidOperationException($"Invalid expression: Unexpected token '{_tokens[_position]?.Value}' at position {_position}");
         }
 
         return result;
     }
 }
 
-static class Program
+public static class Program
 {
-    static void Main(string[] args)
+    private static void Main()
     {
-        string input = "(10 + 5) * 2 - 6 / 3";
+        string input = "2/1 - (10 + 5) * 2 - 6 / 0 ";
         Lexer lexer = new Lexer(input);
-        List<Token> tokens = lexer.Tokenize();
+        List<Token?> tokens = lexer.Tokenize();
 
-        foreach (var token in tokens)
+        foreach (Token? token in tokens)
         {
-            Console.WriteLine($"Type: {token.Type}, Value: {token.Value}");
+            if (token != null) Console.WriteLine($"Type: {token.Type}, Value: {token.Value}");
         }
 
         Calculator calculator = new Calculator(tokens);

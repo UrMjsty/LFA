@@ -1,0 +1,15 @@
+/home/urmjsty/software_eng/RiderProjects/LFALab/RegularGrammarForUniLab/bin/Debug/net6.0/RegularGrammarForUniLab
+/home/urmjsty/software_eng/RiderProjects/LFALab/RegularGrammarForUniLab/bin/Debug/net6.0/RegularGrammarForUniLab.deps.json
+/home/urmjsty/software_eng/RiderProjects/LFALab/RegularGrammarForUniLab/bin/Debug/net6.0/RegularGrammarForUniLab.runtimeconfig.json
+/home/urmjsty/software_eng/RiderProjects/LFALab/RegularGrammarForUniLab/bin/Debug/net6.0/RegularGrammarForUniLab.dll
+/home/urmjsty/software_eng/RiderProjects/LFALab/RegularGrammarForUniLab/bin/Debug/net6.0/RegularGrammarForUniLab.pdb
+/home/urmjsty/software_eng/RiderProjects/LFALab/RegularGrammarForUniLab/obj/Debug/net6.0/RegularGrammarForUniLab.csproj.AssemblyReference.cache
+/home/urmjsty/software_eng/RiderProjects/LFALab/RegularGrammarForUniLab/obj/Debug/net6.0/RegularGrammarForUniLab.GeneratedMSBuildEditorConfig.editorconfig
+/home/urmjsty/software_eng/RiderProjects/LFALab/RegularGrammarForUniLab/obj/Debug/net6.0/RegularGrammarForUniLab.AssemblyInfoInputs.cache
+/home/urmjsty/software_eng/RiderProjects/LFALab/RegularGrammarForUniLab/obj/Debug/net6.0/RegularGrammarForUniLab.AssemblyInfo.cs
+/home/urmjsty/software_eng/RiderProjects/LFALab/RegularGrammarForUniLab/obj/Debug/net6.0/RegularGrammarForUniLab.csproj.CoreCompileInputs.cache
+/home/urmjsty/software_eng/RiderProjects/LFALab/RegularGrammarForUniLab/obj/Debug/net6.0/RegularGrammarForUniLab.dll
+/home/urmjsty/software_eng/RiderProjects/LFALab/RegularGrammarForUniLab/obj/Debug/net6.0/refint/RegularGrammarForUniLab.dll
+/home/urmjsty/software_eng/RiderProjects/LFALab/RegularGrammarForUniLab/obj/Debug/net6.0/RegularGrammarForUniLab.pdb
+/home/urmjsty/software_eng/RiderProjects/LFALab/RegularGrammarForUniLab/obj/Debug/net6.0/RegularGrammarForUniLab.genruntimeconfig.cache
+/home/urmjsty/software_eng/RiderProjects/LFALab/RegularGrammarForUniLab/obj/Debug/net6.0/ref/RegularGrammarForUniLab.dll
