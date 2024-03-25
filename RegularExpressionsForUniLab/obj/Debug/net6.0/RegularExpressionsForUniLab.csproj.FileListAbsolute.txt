@@ -1,0 +1,15 @@
+/home/urmjsty/software_eng/RiderProjects/LFALab/RegularExpressionsForUniLab/bin/Debug/net6.0/RegularExpressionsForUniLab
+/home/urmjsty/software_eng/RiderProjects/LFALab/RegularExpressionsForUniLab/bin/Debug/net6.0/RegularExpressionsForUniLab.deps.json
+/home/urmjsty/software_eng/RiderProjects/LFALab/RegularExpressionsForUniLab/bin/Debug/net6.0/RegularExpressionsForUniLab.runtimeconfig.json
+/home/urmjsty/software_eng/RiderProjects/LFALab/RegularExpressionsForUniLab/bin/Debug/net6.0/RegularExpressionsForUniLab.dll
+/home/urmjsty/software_eng/RiderProjects/LFALab/RegularExpressionsForUniLab/bin/Debug/net6.0/RegularExpressionsForUniLab.pdb
+/home/urmjsty/software_eng/RiderProjects/LFALab/RegularExpressionsForUniLab/obj/Debug/net6.0/RegularExpressionsForUniLab.csproj.AssemblyReference.cache
+/home/urmjsty/software_eng/RiderProjects/LFALab/RegularExpressionsForUniLab/obj/Debug/net6.0/RegularExpressionsForUniLab.GeneratedMSBuildEditorConfig.editorconfig
+/home/urmjsty/software_eng/RiderProjects/LFALab/RegularExpressionsForUniLab/obj/Debug/net6.0/RegularExpressionsForUniLab.AssemblyInfoInputs.cache
+/home/urmjsty/software_eng/RiderProjects/LFALab/RegularExpressionsForUniLab/obj/Debug/net6.0/RegularExpressionsForUniLab.AssemblyInfo.cs
+/home/urmjsty/software_eng/RiderProjects/LFALab/RegularExpressionsForUniLab/obj/Debug/net6.0/RegularExpressionsForUniLab.csproj.CoreCompileInputs.cache
+/home/urmjsty/software_eng/RiderProjects/LFALab/RegularExpressionsForUniLab/obj/Debug/net6.0/RegularExpressionsForUniLab.dll
+/home/urmjsty/software_eng/RiderProjects/LFALab/RegularExpressionsForUniLab/obj/Debug/net6.0/refint/RegularExpressionsForUniLab.dll
+/home/urmjsty/software_eng/RiderProjects/LFALab/RegularExpressionsForUniLab/obj/Debug/net6.0/RegularExpressionsForUniLab.pdb
+/home/urmjsty/software_eng/RiderProjects/LFALab/RegularExpressionsForUniLab/obj/Debug/net6.0/RegularExpressionsForUniLab.genruntimeconfig.cache
+/home/urmjsty/software_eng/RiderProjects/LFALab/RegularExpressionsForUniLab/obj/Debug/net6.0/ref/RegularExpressionsForUniLab.dll
