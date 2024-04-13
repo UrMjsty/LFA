@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LexerForUniLab", "LexerForU
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegularExpressionsForUniLab", "RegularExpressionsForUniLab\RegularExpressionsForUniLab.csproj", "{44000818-6883-4DE1-A409-6E0BBD4BFF9D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChomskyNormalForm", "ChomskyNormalForm\ChomskyNormalForm.csproj", "{75426466-A7FD-4E3E-92B6-7A399A2CD14E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{44000818-6883-4DE1-A409-6E0BBD4BFF9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{44000818-6883-4DE1-A409-6E0BBD4BFF9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{44000818-6883-4DE1-A409-6E0BBD4BFF9D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75426466-A7FD-4E3E-92B6-7A399A2CD14E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75426466-A7FD-4E3E-92B6-7A399A2CD14E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75426466-A7FD-4E3E-92B6-7A399A2CD14E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75426466-A7FD-4E3E-92B6-7A399A2CD14E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
