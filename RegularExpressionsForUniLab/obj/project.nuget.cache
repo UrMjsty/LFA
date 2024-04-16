@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "do2O09MENJPIijJ+0geGFSytn7Bv98boIL5i4OzWrhx6qptUChT99MWstHl2NNCQ7eiwPciM6aOyJMuo14hEcw==",
+  "dgSpecHash": "SOG/J432fIj9gCabH5eKOjaa40j4yv4TndzddRAK8f03O0ziqObspfWHZDEhQKg8t1JPGMkmqczy2u4PHfCjtA==",
   "success": true,
   "projectFilePath": "/home/urmjsty/software_eng/RiderProjects/LFALab/RegularExpressionsForUniLab/RegularExpressionsForUniLab.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/home/urmjsty/.nuget/packages/nunit/4.1.0/nunit.4.1.0.nupkg.sha512"
+  ],
   "logs": []
 }

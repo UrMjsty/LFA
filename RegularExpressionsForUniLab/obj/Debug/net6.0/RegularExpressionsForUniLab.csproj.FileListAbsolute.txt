@@ -13,3 +13,6 @@
 /home/urmjsty/software_eng/RiderProjects/LFALab/RegularExpressionsForUniLab/obj/Debug/net6.0/RegularExpressionsForUniLab.pdb
 /home/urmjsty/software_eng/RiderProjects/LFALab/RegularExpressionsForUniLab/obj/Debug/net6.0/RegularExpressionsForUniLab.genruntimeconfig.cache
 /home/urmjsty/software_eng/RiderProjects/LFALab/RegularExpressionsForUniLab/obj/Debug/net6.0/ref/RegularExpressionsForUniLab.dll
+/home/urmjsty/software_eng/RiderProjects/LFALab/RegularExpressionsForUniLab/bin/Debug/net6.0/nunit.framework.dll
+/home/urmjsty/software_eng/RiderProjects/LFALab/RegularExpressionsForUniLab/bin/Debug/net6.0/nunit.framework.legacy.dll
+/home/urmjsty/software_eng/RiderProjects/LFALab/RegularExpressionsForUniLab/obj/Debug/net6.0/RegularExpressionsForUniLab.csproj.CopyComplete

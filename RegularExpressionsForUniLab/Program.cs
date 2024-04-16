@@ -177,9 +177,9 @@ namespace RegularExpressionsForUniLab
             var curStr = "";
             foreach (Token token in _tokens)
             {
-                switch (token.Type)
+                switch (token.Type, rand == 0)
                 {
-                    case TokenType.Symbol:
+                    case (TokenType.Symbol, _):
                         if(_isInBrackets)
                             _inBracketsTokens.Add(token.Value);
                         else if (_isPower)
@@ -202,10 +202,10 @@ namespace RegularExpressionsForUniLab
                         }
 
                         break;
-                    case TokenType.Or:
+                    case (TokenType.Or, _):
                         // Do nothing for now, handle this in future implementations
                         break;
-                    case TokenType.Plus:
+                    case (TokenType.Plus, _):
                         rand = new Random().Next(0, 5);
                         for (int i = 0; i < rand; i++)
                         {
@@ -213,9 +213,8 @@ namespace RegularExpressionsForUniLab
                             Console.WriteLine("current string = " + sb.ToString());
 
                         }
-                        // Do nothing for now, handle this in future implementations    
                         break;
-                    case TokenType.Star:
+                    case (TokenType.Star, _):
                         sb.Length--;
                         rand = new Random().Next(0, 5);
                         for (int i = 0; i < rand; i++)
@@ -226,10 +225,10 @@ namespace RegularExpressionsForUniLab
                         }
                         // Do nothing for now, handle this in future implementations
                         break;
-                    case TokenType.LBracket:
+                    case (TokenType.LBracket, _):
                         _isInBrackets = true;
                         break;
-                    case TokenType.Rbracket: 
+                    case (TokenType.Rbracket, _): 
                         rand = new Random().Next(0, _inBracketsTokens.Count);
                         curStr = _inBracketsTokens[rand];
                         sb.Append(curStr);
@@ -238,13 +237,13 @@ namespace RegularExpressionsForUniLab
                         _inBracketsTokens.Clear();
                         _isInBrackets = false;
                         break;
-                    case TokenType.EOF:
+                    case (TokenType.EOF, _):
                         // Ignore brackets and EOF for now
                         break;
-                    case TokenType.Power:
+                    case (TokenType.Power, _):
                         _isPower = true;
                         break;
-                    case TokenType.QuestionMark:
+                    case (TokenType.QuestionMark, _):
                         rand = new Random().Next(0, 2);
                         if (rand == 1)
                             sb.Length--;
