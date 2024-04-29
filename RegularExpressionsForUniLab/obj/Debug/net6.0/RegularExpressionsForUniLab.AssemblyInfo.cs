@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RegularExpressionsForUniLab")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+38ab5784a16e83d4345f168fafd0e449eb94537e")]
 [assembly: System.Reflection.AssemblyProductAttribute("RegularExpressionsForUniLab")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RegularExpressionsForUniLab")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

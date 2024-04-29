@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "SOG/J432fIj9gCabH5eKOjaa40j4yv4TndzddRAK8f03O0ziqObspfWHZDEhQKg8t1JPGMkmqczy2u4PHfCjtA==",
+  "dgSpecHash": "jfa5onSLYSQmgUON2SOVDxYZwfsNz6MuUenjIu50aA6RxLmDQMuPi3tF/7MX3zOK1xAbB0ZHy2PeepyW8JkEgg==",
   "success": true,
   "projectFilePath": "/home/urmjsty/software_eng/RiderProjects/LFALab/RegularExpressionsForUniLab/RegularExpressionsForUniLab.csproj",
   "expectedPackageFiles": [
-    "/home/urmjsty/.nuget/packages/nunit/4.1.0/nunit.4.1.0.nupkg.sha512"
+    "/home/urmjsty/.nuget/packages/nunit/4.1.0/nunit.4.1.0.nupkg.sha512",
+    "/home/urmjsty/.nuget/packages/microsoft.netcore.app.ref/6.0.29/microsoft.netcore.app.ref.6.0.29.nupkg.sha512",
+    "/home/urmjsty/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.29/microsoft.aspnetcore.app.ref.6.0.29.nupkg.sha512",
+    "/home/urmjsty/.nuget/packages/microsoft.netcore.app.host.linux-x64/6.0.29/microsoft.netcore.app.host.linux-x64.6.0.29.nupkg.sha512"
   ],
   "logs": []
 }

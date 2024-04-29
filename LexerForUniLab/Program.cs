@@ -1,235 +1,139 @@
-﻿//using System;
-//using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
-namespace LexerForUniLab;
-
-public enum TokenType
+class Program
 {
-    Number,
-    Plus,
-    Minus,
-    Multiply,
-    Divide,
-    LeftParenthesis,
-    RightParenthesis,
-    // ReSharper disable once InconsistentNaming
-    EOF // End of File
-}
-
-public class Token
-{
-    public TokenType Type { get; }
-    public string Value { get; }
-
-    public Token(TokenType type, string value)
+    static void Main(string[] args)
     {
-        Type = type;
-        Value = value;
-    }
-}
+        Console.WriteLine("Enter a regular expression:");
+        string regexString = Console.ReadLine();
 
-public class Lexer
-{
-    private readonly string _input;
-    private int _position;
+        List<string> examples = GenerateExamples(regexString, 5);
 
-    public Lexer(string input)
-    {
-        _input = input;
-        _position = 0;
-    }
-
-    private void SkipWhitespace()
-    {
-        while (_position < _input.Length && char.IsWhiteSpace(_input[_position]))
+        Console.WriteLine("Examples of strings that match the regular expression:");
+        foreach (string example in examples)
         {
-            _position++;
+            Console.WriteLine(example);
         }
     }
 
-    public List<Token?> Tokenize()
+    static List<string> GenerateExamples(string regexString, int count)
     {
-        List<Token?> tokens = new List<Token?>();
+        List<string> examples = new List<string>();
 
-        while (_position < _input.Length)
+        Random random = new Random();
+        for (int i = 0; i < count; i++)
         {
-            char currentChar = _input[_position];
-
-            if (char.IsDigit(currentChar))
+            StringBuilder exampleBuilder = new StringBuilder();
+            int j = 0;
+            while (j < regexString.Length)
             {
-                string number = string.Empty;
-                while (_position < _input.Length && (char.IsDigit(_input[_position]) || _input[_position] == '.'))
+                char c = regexString[j];
+                switch (c)
                 {
-                    number += _input[_position];
-                    _position++;
+                    case '\\':
+                        // Skip escaped character
+                        j++;
+                        if (j < regexString.Length)
+                            exampleBuilder.Append(regexString[j]);
+                        break;
+                    case '(':
+                        // Process group
+                        int closingIndexGroup = FindClosingBracketIndex(regexString, j);
+                        if (closingIndexGroup != -1)
+                        {
+                            string subRegex = regexString.Substring(j + 1, closingIndexGroup - j - 1);
+                            List<string> subExamples = GenerateExamples(subRegex, 1);
+                            exampleBuilder.Append(subExamples[0]);
+                            j = closingIndexGroup;
+                        }
+                        break;
+                    case '+':
+                        // Repeat previous character at least once
+                        if (exampleBuilder.Length > 0)
+                        {
+                            char prevChar = exampleBuilder[exampleBuilder.Length - 1];
+                            exampleBuilder.Append(prevChar);
+                        }
+                        break;
+                    case '*':
+                        // Repeat previous character zero or more times
+                        if (exampleBuilder.Length > 0)
+                        {
+                            char prevChar = exampleBuilder[exampleBuilder.Length - 1];
+                            if (random.Next(2) == 1)
+                                exampleBuilder.Append(prevChar);
+                        }
+                        break;
+                    case '?':
+                        // Make previous character optional
+                        if (exampleBuilder.Length > 0)
+                        {
+                            char prevChar = exampleBuilder[exampleBuilder.Length - 1];
+                            if (random.Next(2) == 1)
+                                exampleBuilder.Append(prevChar);
+                        }
+                        break;
+                    case '|':
+                        // OR operator, choose randomly between the options
+                        string leftOption = "";
+                        string rightOption = "";
+                        for (int k = j - 1; k >= 0; k--)
+                        {
+                            if (regexString[k] == '(')
+                            {
+                                leftOption = regexString.Substring(k + 1, j - k - 1);
+                                break;
+                            }
+                        }
+                        int closingIndexOr = FindClosingBracketIndex(regexString, j);
+                        if (closingIndexOr != -1)
+                        {
+                            rightOption = regexString.Substring(j + 1, closingIndexOr - j - 1);
+                           // string chosenOption = random.Next(2) == 0 ? GetRandomChar(leftOption, random) : GetRandomChar(rightOption, random);
+                           // exampleBuilder.Append(chosenOption);
+                            j = closingIndexOr;
+                        }
+                        else
+                        {
+                            // Handle cases where '|' is at the beginning or end of the regex or followed by another '|'
+                            exampleBuilder.Append('|');
+                        }
+                        break;
+                    default:
+                        exampleBuilder.Append(c);
+                        break;
                 }
-                tokens.Add(new Token(TokenType.Number, number));
+                j++;
             }
-            else switch (currentChar)
-            {
-                case '+':
-                    tokens.Add(new Token(TokenType.Plus, "+"));
-                    _position++;
-                    break;
-                case '-':
-                    tokens.Add(new Token(TokenType.Minus, "-"));
-                    _position++;
-                    break;
-                case '*':
-                    tokens.Add(new Token(TokenType.Multiply, "*"));
-                    _position++;
-                    break;
-                case '/':
-                    tokens.Add(new Token(TokenType.Divide, "/"));
-                    _position++;
-                    break;
-                case '(':
-                    tokens.Add(new Token(TokenType.LeftParenthesis, "("));
-                    _position++;
-                    break;
-                case ')':
-                    tokens.Add(new Token(TokenType.RightParenthesis, ")"));
-                    _position++;
-                    break;
-                default:
-                {
-                    if (char.IsWhiteSpace(currentChar))
-                    {
-                        SkipWhitespace();
-                    }
-                    else
-                    {
-                        throw new InvalidOperationException($"Invalid character: {currentChar}");
-                    }
-
-                    break;
-                }
-            }
+            examples.Add(exampleBuilder.ToString());
         }
 
-        tokens.Add(new Token(TokenType.EOF, "")); // Add EOF token to mark the end of tokens
-        return tokens;
+        return examples;
+    }
+
+    static int FindClosingBracketIndex(string regexString, int startIndex)
+    {
+        int level = 0;
+        for (int i = startIndex; i < regexString.Length; i++)
+        {
+            char c = regexString[i];
+            if (c == '(')
+                level++;
+            else if (c == ')')
+                level--;
+
+            if (level == 0)
+                return i;
+        }
+        return -1;
+    }
+
+    static char GetRandomChar(string options, Random random)
+    {
+        int index = random.Next(options.Length);
+        return options[index];
     }
 }
-
-public class Calculator
-{
-    private readonly List<Token?> _tokens;
-    private int _position;
-
-    public Calculator(List<Token?> tokens)
-    {
-        _tokens = tokens;
-        _position = 0;
-    }
-
-    private Token? Peek()
-    {
-        return _position < _tokens.Count ? _tokens[_position] : null;
-    }
-
-    private Token? Advance()
-    {
-        _position++;
-        return _tokens[_position - 1];
-    }
-
-    private double Factor()
-    {
-        Token? currentToken = Peek();
-        switch (currentToken)
-        {
-            case { Type: TokenType.Number }:
-                Advance();
-                return double.Parse(currentToken.Value);
-            case { Type: TokenType.LeftParenthesis }:
-            {
-                Advance();
-                double result = Expression();
-                if (Peek()?.Type != TokenType.RightParenthesis)
-                {
-                    // Console.ForegroundColor = ConsoleColor.Red;
-                    throw new InvalidOperationException($"Invalid expression: Missing right parenthesis after operator at position {_position}");
-                }
-                Advance();
-                return result;
-            }
-            default:
-                throw new InvalidOperationException($"Invalid expression: Expected number or bracket after operator at position {_position}");
-        }
-    }
-
-    private double Term()
-    {
-        double result = Factor();
-
-        while (Peek()?.Type == TokenType.Multiply || Peek()?.Type == TokenType.Divide)
-        {
-            Token? op = Advance();
-            double right = Factor();
-            if (op is { Type: TokenType.Multiply })
-            {
-                result *= right;
-            }
-            else
-            {
-                result /= right;
-            }
-        }
-
-        return result;
-    }
-
-    private double Expression()
-    {
-        double result = Term();
-
-        while (Peek()?.Type is TokenType.Plus or TokenType.Minus)
-        {
-            Token? op = Advance();
-            double right = Term();
-            if (op is { Type: TokenType.Plus })
-            {
-                result += right;
-            }
-            else
-            {
-                result -= right;
-            }
-        }
-
-        return result;
-    }
-
-    public double Calculate()
-    {
-        double result = Expression();
-
-        if (_position < _tokens.Count - 1 || (_position == _tokens.Count - 1 && _tokens[_position]!.Type != TokenType.EOF))
-        {
-          //  Console.ForegroundColor = ConsoleColor.Red;
-           throw new InvalidOperationException($"Invalid expression: Unexpected token '{_tokens[_position]?.Value}' at position {_position}");
-        }
-
-        return result;
-    }
-}
-
-public static class Program
-{
-    private static void Main()
-    {
-        string input = "2/1 - (10 + 5) * 2 - 6 / 0 ";
-        Lexer lexer = new Lexer(input);
-        List<Token?> tokens = lexer.Tokenize();
-
-        foreach (Token? token in tokens)
-        {
-            if (token != null) Console.WriteLine($"Type: {token.Type}, Value: {token.Value}");
-        }
-
-        Calculator calculator = new Calculator(tokens);
-        double result = calculator.Calculate();
-        Console.WriteLine($"Result: {result}");
-    }
-}
+    

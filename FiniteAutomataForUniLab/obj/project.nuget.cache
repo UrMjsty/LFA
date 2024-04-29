@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "mcUzQIU2u9chZa2Q5cgH6Ulwz345OMeD7OWeJaBvlbR1/9VyyGBuYTG5/WLfT3RlW6kQfsgcoYlPIIPtqD2EcA==",
+  "dgSpecHash": "7gFk4KWIh+8k6dHe1R96BKoKEVUJWfkb4X5OachxPtGdP015jJRljKw4teR1FXy3GoHRv3DMCsyNsHvgMrxbWQ==",
   "success": true,
   "projectFilePath": "/home/urmjsty/software_eng/RiderProjects/LFALab/FiniteAutomataForUniLab/FiniteAutomataForUniLab.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/home/urmjsty/.nuget/packages/microsoft.netcore.app.ref/6.0.29/microsoft.netcore.app.ref.6.0.29.nupkg.sha512",
+    "/home/urmjsty/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.29/microsoft.aspnetcore.app.ref.6.0.29.nupkg.sha512",
+    "/home/urmjsty/.nuget/packages/microsoft.netcore.app.host.linux-x64/6.0.29/microsoft.netcore.app.host.linux-x64.6.0.29.nupkg.sha512"
+  ],
   "logs": []
 }

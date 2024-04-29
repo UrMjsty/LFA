@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "uiXB3azNoMduvXbmCxecBKGJPhMy5PTPehHYE3lBj9qYSrGW9nJFZB8X5dAS4HwjvPFlaDBND6QcMTWhQMvnDQ==",
+  "dgSpecHash": "g/wVkVVP5gWUHtXzvL7CoB5FT/uXdLtVIUGjf3MNVW6nwd5Dk/dTU16hG3ZmBjFhWAXrXfo0tYqzDy5SM1d7yw==",
   "success": true,
   "projectFilePath": "/home/urmjsty/software_eng/RiderProjects/LFALab/RegularGrammarForUniLab/RegularGrammarForUniLab.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/home/urmjsty/.nuget/packages/microsoft.netcore.app.ref/6.0.29/microsoft.netcore.app.ref.6.0.29.nupkg.sha512",
+    "/home/urmjsty/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.29/microsoft.aspnetcore.app.ref.6.0.29.nupkg.sha512",
+    "/home/urmjsty/.nuget/packages/microsoft.netcore.app.host.linux-x64/6.0.29/microsoft.netcore.app.host.linux-x64.6.0.29.nupkg.sha512"
+  ],
   "logs": []
 }
